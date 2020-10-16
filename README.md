@@ -31,3 +31,10 @@ samples, guidance on mobile development, and a full API reference.
 13. Integration
 14. Unit
 15. Widget
+
+## Installation and Setup:
+1. First clone the repository using the link into your flutter installation directory-git clone [https://github.com/Zeo-shark/Flutter-Tutorial.git](https://github.com/Zeo-shark/Flutter-Tutorial.git).
+2. cd Flutter-Tutorial into the directory of installation.
+3. In the cmd enter flutter doctor
+4. flutter pub-get.
+5. flutter run.

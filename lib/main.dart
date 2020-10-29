@@ -16,37 +16,50 @@ class test extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Row(
+      body:Row(
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-
-            children:<Widget>[
-            Row(
-              children: <Widget>[
-                Text('hello'),
-                Text('World!')
-              ]
-            ),
-            Container(
-              padding: EdgeInsets.all(0.0),
+  Expanded(
+    
+    flex: 3,
+              Image.asset('assets/space1.jpg'),
+  ),
+              Expanded(
+    
+                flex: 3, 2,1
+    
+                children: <Widget>[
+    
+                Container(
+    
+                padding: EdgeInsets.all(30.0),
+    
+                color: Colors.cyan,
+    
+                child:Text('1'),
+    
+                ),
+    
+              
+    
+              Container(padding: EdgeInsets.all(30.0),
+    
               color: Colors.cyan,
-              child:Text('One'),
-            ),
-            Container(
-              padding: EdgeInsets.all(0.0),
-              color: Colors.amber,
-              child:Text('two'),
-            ),
-            Container(
-              padding: EdgeInsets.all(0.0),
-              color: Colors.pinkAccent,
-              child:Text('Three'),
-            ),
+    
+              child:Text('1'),),
+    
+              Container(padding: EdgeInsets.all(30.0),
+    
+              color: Colors.cyan,
+    
+              child:Text('1'),),
+    
+                          ],
+    
+              ),
+    
             ],
-          ),
-        ],
+  ),
+],
       ),
       floatingActionButton: FloatingActionButton(
         child: Text('click'),

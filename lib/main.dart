@@ -36,7 +36,12 @@ class _HomeState extends State<Home>{
     http.Response response= await http.get("http://api.openweathermap.org/data/2.5/weather?q=Jamshedpur&appid=20e4724a3081e994486c2b2a82ea413b");
     var results= jsonDecode(response.body);
     setState(() {
-      
+      this.city= results['name'];
+      this.temp= results['main']['temp'];
+      this.description= results['weather']['0']['description'];
+      this.currently=  results['weather']['0']['main'];
+      this.humidity= results['main']['humidity'];
+      this.windSpeed= results['wind']['speed'];
   // "coord": {
   //   "lon": -122.08,
   //   "lat": 37.39
@@ -80,12 +85,7 @@ class _HomeState extends State<Home>{
   // "name": "Mountain View",
   // "cod": 200
   // }                    
-      this.city= results['name'];
-      this.temp= results['main']['temp'];
-      this.description= results['weather']['0']['description'];
-      this.currently=  results['weather']['0']['main'];
-      this.humidity= results['main']['humidity'];
-      this.windSpeed= results['wind']['speed'];
+      
     });
   }
 
@@ -112,7 +112,7 @@ class _HomeState extends State<Home>{
                Padding(
                padding: EdgeInsets.only(bottom: 10.0),
                child:Text(
-                 "Currently in "+ city!=null? city.toString() : "Loading" ,
+                 "Currently in Loading" ,
                  style: TextStyle(
                    color: Colors.white,
                    fontSize: 14.0,
